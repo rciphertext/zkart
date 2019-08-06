@@ -1,0 +1,65 @@
+3 tabels are create:
+1. Item Table:
+CREATE TABLE tbl_item (
+        surr_key Integer PRIMARY KEY AUTO_INCREMENT,
+	item_id int(10) NOT NULL UNIQUE,
+	name varchar(30) NOT NULL,
+    	description varchar(255) NOT NULL,
+	pic_location varchar(200) NOT NULL,
+	seller_id varchar(200) NOT NULL,
+	price int(20) NOT NULL,
+    	discount int(20),
+	cat_id varchar(30) NOT NULL,
+ 	sub_cat_id varchar(30) NOT NULL
+);
+
+INSERT INTO tbl_item (item_id, name, description, pic_location ,seller_id,price,discount,cat_id,sub_cat_id)
+VALUES ('100678','Honor 10 Lite','This is first item','/home/anirudh/img.png','IndiflashMart','30400','20','Electronics','Mobiles');
+INSERT INTO tbl_item (item_id, name, description, pic_location ,seller_id,price,discount,cat_id,sub_cat_id)
+VALUES ('100679','Samsung J2 Prime','This is second item','/home/anirudh/img1.png','Visonstar','12400','10','Electronics','Mobiles');
+INSERT INTO tbl_item (item_id, name, description, pic_location ,seller_id,price,discount,cat_id,sub_cat_id)
+VALUES ('100778','Tissot','This is third item','/home/anirudh/img2.png','Truecom','50400','5','Men','Watch');
+INSERT INTO tbl_item (item_id, name, description, pic_location ,seller_id,price,discount,cat_id,sub_cat_id)
+VALUES ('100878','Mi LED Smart TV','This is Last item','/home/anirudh/img3.png','Truecom','100400','25','Electronics','Television');
+
+Sql: Select * from tbl_item;
+
+2. Buyerinfo Table:
+Buyerinfo Table:
+CREATE TABLE BUYER_INFORMATION (
+  SKEY Integer PRIMARY KEY AUTO_INCREMENT UNSIGNED,
+	USERNAME varchar(200) NOT NULL UNIQUE,
+	NAME varchar(50) NOT NULL,
+	EMAIL varchar(30) NOT NULL,
+  PASSWORD varchar(45) NOT NULL,
+  DOB DATE NOT NULL);
+	
+  
+INSERT INTO BUYER_INFORMATION (USERNAME, NAME ,EMAIL , PASSWORD , DOB)
+VALUES ('ani08','Satyam','ac@gmail.com','1234','1996-01-01');
+INSERT INTO tbl_buyerinfo (USERNAME, NAME ,EMAIL , PASSWORD , DOB)
+VALUES ('ani07','Utkarsh','bc@gmail.com','1234','1997-01-01');
+INSERT INTO tbl_buyerinfo (USERNAME, NAME ,EMAIL , PASSWORD , DOB)
+VALUES ('ani06','Prabhanjan','dc@gmail.com','1234' ,'1995-01-01');
+INSERT INTO tbl_buyerinfo (USERNAME, NAME ,EMAIL , PASSWORD , DOB)
+VALUES ('ani05','Mayank','ec@gmail.com','1234','1994-01-01');
+
+Sql: Select * from tbl_buyerinfo;
+
+3. sellerinfo Table:
+CREATE TABLE tbl_sellerinfo (
+        surr_key Integer PRIMARY KEY AUTO_INCREMENT,
+	seller_id int(10) NOT NULL,
+	name varchar(30) NOT NULL
+);
+        
+INSERT INTO tbl_sellerinfo (seller_id,name)
+VALUES ('10067','Anirudh');
+INSERT INTO tbl_sellerinfo (seller_id,name)
+VALUES ('10098','Sachin');
+INSERT INTO tbl_sellerinfo (seller_id,name)
+VALUES ('10054','Jagmeet');
+INSERT INTO tbl_sellerinfo (seller_id,name)
+VALUES ('10076','Meenal');
+
+Sql: Select * from tbl_sellerinfo;
